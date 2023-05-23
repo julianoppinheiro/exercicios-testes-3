@@ -12,4 +12,13 @@ describe("Testando o componente Button", () => {
         
     });
 
+    test("Renderizando o botão com a label 'Click me'", () => {
+            
+            render(<Button label="Click me" />);
+            const buttonHtmlElement = screen.queryByText("Click me");
+            expect(buttonHtmlElement).toBeInTheDocument();
+            
+        }
+    );
+
   });
